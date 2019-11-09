@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/bootstrap.css")
+        link(rel="stylesheet", href="css/app.css")
+        title TypeScript URL Shortener!
+    body
+        main(class="container")
+            div(class="jumbotron")
+                div(class="row")
+                    div(class="col-md-12 align-self-center")
+                        h1(class="text-center") URL Shortener
+                        label(for="url") URL
+                        div(class="input-group")
+                            input.form-control(type="text", id="url", role="url", aria-label="Short URL")
+                            div(class="input-group-append")
+                                button(class="btn btn-md btn-primary", id="btn-short", role="button", aria-label="Short URL Button") Short URL
+                
+                div(class="row")
+                    div(class="col-md-12")
+                        div(class="alert alert-danger mt-3", id="url-alert" role="alert")
+                            span(id="url-alert-text") URL Not Found
+
+
+        footer(class="footer")
+            div(class="container")
+                span(class="text-muted") TypeScript URL Shortener!
+        
+        script(src="js/app.js")

@@ -1,0 +1,28 @@
+{
+  "name": "ts-url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/aligoren/ts-url-shortener",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.30",
+    "@types/node": "^12.12.7",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.9",
+    "pug": "^2.0.4",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "start": "ts-node dist/server.js",
+    "build": "tsc -p ."
+  },
+  "author": "",
+  "license": "ISC"
+}
