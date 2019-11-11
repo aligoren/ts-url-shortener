@@ -66,7 +66,12 @@ class ShortenerController implements IControllerBase {
         let urlInfo = await shortenerModel.findOne(data)
 
         if (urlInfo == null) {
-            const shortCode = this.generateRandomUrl(5)
+            var shortCode: string
+            
+            do{
+                shortCode = this.generateRandomUrl(5)
+                urlInfo = await shortenerModel.findOne({shortUrl: shortCode})
+            }while(urlInfo !== null)
 
             const shortData: IShortener = {
                 longUrl: url,
@@ -83,8 +88,6 @@ class ShortenerController implements IControllerBase {
             message: 'URL Shortened',
             url: urlInfo.shortUrl
         })
-
-        
     }
 }
 
